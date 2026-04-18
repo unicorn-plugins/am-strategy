@@ -1,0 +1,20 @@
+tools:
+  - name: file_read
+    description: "6R 룰북·fit-analyzer 산출물·이전 단계 산출물 읽기"
+    input: { 파일경로 }
+    output: { 파일내용 }
+
+  - name: file_write
+    description: "6R 상세·포트폴리오·통합 보고서 저장"
+    input: { 저장경로, 마크다운본문 }
+    output: { 저장결과 }
+
+  - name: reference_lookup
+    description: "6R 비용·기간·리스크 프로파일 및 DORA 실행 가이드 조회"
+    input: { 키워드, 카테고리 }
+    output: { 해당섹션내용, 출처메타 }
+
+  - name: user_interact
+    description: "규모 분류·게이트 임계값·리스크 허용치 등 의사결정 입력 확인"
+    input: { 질문목록 }
+    output: { 답변목록 }

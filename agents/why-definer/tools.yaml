@@ -1,0 +1,20 @@
+tools:
+  - name: file_read
+    description: "기업 프로파일·DORA·TCO 벤치마크 참조 자료 읽기"
+    input: { 파일경로 }
+    output: { 파일내용 }
+
+  - name: file_write
+    description: "WHY 보고서(드라이버/정량화/스폰서십/통합)를 output/ 디렉토리에 저장"
+    input: { 저장경로, 마크다운본문 }
+    output: { 저장결과 }
+
+  - name: reference_lookup
+    description: "references/dora/, references/tco-benchmark/ 내 마크다운 섹션을 검색하여 근거 인용 확보"
+    input: { 키워드, 카테고리 }
+    output: { 해당섹션내용, 출처메타 }
+
+  - name: user_interact
+    description: "대상 기업 정보·이슈가 부족할 때 경영진 관점 질문 수집"
+    input: { 질문목록 }
+    output: { 답변목록 }

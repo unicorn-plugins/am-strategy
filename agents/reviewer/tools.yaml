@@ -1,0 +1,15 @@
+tools:
+  - name: file_read
+    description: "모든 step 산출물 및 참조 자료 읽기"
+    input: { 파일경로 }
+    output: { 파일내용 }
+
+  - name: file_write
+    description: "검증 보고서 저장 (산출물 직접 수정 금지)"
+    input: { 저장경로, 마크다운본문 }
+    output: { 저장결과 }
+
+  - name: reference_lookup
+    description: "DORA · 6R 룰북 · TCO 벤치마크 근거 조회"
+    input: { 키워드, 카테고리 }
+    output: { 해당섹션내용, 출처메타 }

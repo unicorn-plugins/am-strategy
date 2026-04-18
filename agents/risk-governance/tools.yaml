@@ -1,0 +1,20 @@
+tools:
+  - name: file_read
+    description: "DORA 참조 자료 및 이전 단계 산출물 읽기"
+    input: { 파일경로 }
+    output: { 파일내용 }
+
+  - name: file_write
+    description: "리스크·거버넌스·가드레일 보고서 저장"
+    input: { 저장경로, 마크다운본문 }
+    output: { 저장결과 }
+
+  - name: reference_lookup
+    description: "DORA 5 메트릭 · AI 역량 안티패턴 조회"
+    input: { 키워드, 카테고리 }
+    output: { 해당섹션내용, 출처메타 }
+
+  - name: user_interact
+    description: "리스크 우선순위, 회의체 참석자, AI 정책 허용 범위 등 조직 특화 정보 확인"
+    input: { 질문목록 }
+    output: { 답변목록 }

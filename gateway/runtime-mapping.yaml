@@ -1,0 +1,54 @@
+# am-strategy 런타임 매핑
+#
+# - 티어 매핑(tier_mapping): 에이전트 tier → 실제 모델
+# - 도구 매핑(tool_mapping): 추상 도구 → 실제 도구 (builtin 제외)
+# - 액션 매핑(action_mapping): forbidden_actions 추상 카테고리 → 실제 도구
+
+tier_mapping:
+  default:
+    HEAVY:
+      model: "claude-opus-4-7"
+    HIGH:
+      model: "claude-opus-4-7"
+    MEDIUM:
+      model: "claude-sonnet-4-5"
+    LOW:
+      model: "claude-haiku-4-5"
+
+  # 에이전트별/세부역할별 예외 (비용 최적화)
+  inventory-analyst:
+    MEDIUM:
+      model: "claude-sonnet-4-5"
+    sub_roles:
+      code-scan-reader:
+        MEDIUM:
+          model: "claude-haiku-4-5"   # 정적 분석 결과 파싱은 경량
+
+  doc-exporter:
+    LOW:
+      model: "claude-haiku-4-5"
+
+# ───────────────────────────────────────────────
+# 추상 도구 → 실제 도구 매핑 (builtin 도구는 생략)
+# ───────────────────────────────────────────────
+tool_mapping:
+  image_generate:
+    - type: custom
+      source: "tools/generate_image.py"
+      tools: ["generate_image"]
+
+  document_convert:
+    - type: custom
+      source: "tools/convert-to-markdown.py"
+      tools: ["convert_to_markdown"]
+
+# ───────────────────────────────────────────────
+# 액션 카테고리 → 실제 도구 매핑
+# ───────────────────────────────────────────────
+action_mapping:
+  file_write: ["Write", "Edit"]
+  file_delete: ["Bash"]
+  code_execute: ["Bash"]
+  network_access: ["WebFetch", "WebSearch"]
+  user_interact: ["AskUserQuestion"]
+  agent_delegate: ["Task"]

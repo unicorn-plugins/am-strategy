@@ -1,0 +1,20 @@
+tools:
+  - name: file_read
+    description: "DORA 참조 및 이전 단계 산출물 읽기"
+    input: { 파일경로 }
+    output: { 파일내용 }
+
+  - name: file_write
+    description: "변화관리 조기 착수·Phase별 기획 보고서 저장"
+    input: { 저장경로, 마크다운본문 }
+    output: { 저장결과 }
+
+  - name: reference_lookup
+    description: "DORA 클러스터 메시지·AI mirror 라이브러리·90분 워크숍 가이드 조회"
+    input: { 키워드, 카테고리 }
+    output: { 해당섹션내용, 출처메타 }
+
+  - name: user_interact
+    description: "조직 구조·문화·이해관계자 현황 입력 확인"
+    input: { 질문목록 }
+    output: { 답변목록 }

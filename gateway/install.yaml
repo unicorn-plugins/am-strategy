@@ -1,0 +1,21 @@
+# am-strategy 플러그인 설치 매니페스트
+#
+# 등록 원칙:
+#   - Claude Code 빌트인 도구(Read/Write/Bash 등)와 OMC 기본 MCP/LSP는 포함하지 않음
+#   - 이 플러그인은 문서 워크플로우 중심이므로 외부 MCP/LSP 서버 불필요
+#   - 커스텀 도구(generate_image, convert-to-markdown)만 선언
+
+mcp_servers: []
+
+lsp_servers: []
+
+custom_tools:
+  - name: generate_image
+    description: "Gemini (Nano Banana) 기반 이미지 생성 — 경영진 PPT 인포그래픽 자동 생성"
+    source: tools/generate_image.py
+    required: false
+
+  - name: convert_to_markdown
+    description: "Office 문서(pptx/docx/xlsx) → Markdown 변환 + Groq VLM 이미지 설명"
+    source: tools/convert-to-markdown.py
+    required: false

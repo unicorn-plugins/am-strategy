@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "am-strategy",
+  "owner": {
+    "name": "hiondal",
+    "email": "hiondal@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "am-strategy",
+      "source": "./",
+      "category": "strategy"
+    }
+  ]
+}

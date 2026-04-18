@@ -1,0 +1,20 @@
+tools:
+  - name: file_read
+    description: "6R 룰북·DORA 클러스터·인벤토리 산출물 읽기"
+    input: { 파일경로 }
+    output: { 파일내용 }
+
+  - name: file_write
+    description: "6R/TIME 판정 결과 및 Bounded Context 보고서 저장"
+    input: { 저장경로, 마크다운본문 }
+    output: { 저장결과 }
+
+  - name: reference_lookup
+    description: "references/6r/ 내 룰북의 규칙 ID 상세 조회"
+    input: { 규칙ID, 카테고리 }
+    output: { 규칙정의, 기대입력, 기대출력 }
+
+  - name: user_interact
+    description: "14개 속성 중 결측 항목을 inventory-analyst 산출물 외에서 보충"
+    input: { 질문목록 }
+    output: { 답변목록 }

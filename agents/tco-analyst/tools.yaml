@@ -1,0 +1,20 @@
+tools:
+  - name: file_read
+    description: "TCO 벤치마크·DORA 참조·inventory/fit/strategy 산출물 읽기"
+    input: { 파일경로 }
+    output: { 파일내용 }
+
+  - name: file_write
+    description: "TCO/BEP 보고서 저장"
+    input: { 저장경로, 마크다운본문 }
+    output: { 저장결과 }
+
+  - name: reference_lookup
+    description: "한국 TCO 벤치마크 및 DORA 권장 분리 항목 조회"
+    input: { 키워드, 카테고리 }
+    output: { 해당섹션내용, 출처메타 }
+
+  - name: user_interact
+    description: "가정(인플레이션·환율·성장률 등) 수치 확정"
+    input: { 질문목록 }
+    output: { 답변목록 }

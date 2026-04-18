@@ -1,0 +1,13 @@
+{
+  "name": "am-strategy",
+  "version": "0.0.1",
+  "description": "엔터프라이즈 AM(Application Modernization) 전환 전략을 WHY 정의 → 현황 분석 → 전략 수립 3단계로 체계적·자동화 지원하는 DMAP 플러그인",
+  "author": {
+    "name": "hiondal",
+    "email": "hiondal@gmail.com"
+  },
+  "repository": "https://github.com/unicorn-plugins/am-strategy",
+  "homepage": "https://github.com/unicorn-plugins/am-strategy",
+  "license": "MIT",
+  "keywords": ["am", "application-modernization", "strategy", "6r", "tco", "dora", "enterprise", "dmap", "plugin"]
+}
