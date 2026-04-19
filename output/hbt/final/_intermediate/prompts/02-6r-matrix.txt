@@ -1,0 +1,31 @@
+AM(Application Modernization) 6R 포트폴리오 매핑 매트릭스 인포그래픽. 컨설팅 보고서급 2D 벡터 스타일.
+
+전체: 흰색 배경. 제목 상단 중앙: "6R 포트폴리오 매트릭스 — 24개 시스템 배치"
+
+X축(가로): "비즈니스 가치 →" (낮음 → 높음), Y축(세로): "기술 현대화 난이도 ↑" (낮음 → 높음)
+축 라벨 짙은 네이비 #2C2926, 굵은 산세리프.
+
+매트릭스를 7개 색 영역으로 분할 (부드러운 그라디언트, 반투명):
+- 좌하단: Retain (유지) — 회색 #9CA3AF — "보존·관찰"
+- 중하단: Retire (폐기) — 어두운 회색 #6B7280 — "폐기"
+- 좌중단: Rehost (재호스팅) — 옅은 블루 #93C5FD — "리프트앤시프트"
+- 중간: Replatform — 블루 #60A5FA — "플랫폼 이전"
+- 우중단: Refactor — 에메랄드 #34D399 — "리팩터"
+- 우중상단: Rearchitect — 진한 그린 #059669 — "재설계"
+- 우상단: Rebuild — 레드 #DC2626 — "재구축"
+
+각 영역에 시스템 버블 배치 (직경 14~22px, 텍스트 라벨 포함):
+Retain 영역: "CRM-LEGACY", "HR-CORE"
+Retire: "OLD-DW", "SFA-2008"
+Rehost: "ORD-MGR", "NMS", "CMP", "BI-RPT", "CSC-CTRL"
+Replatform: "BILL-SUB", "CNTR-MGR", "PRV-OLD"
+Refactor: "DW-CORE", "IAM-PROXY"
+Rearchitect: "DLR-PORTAL"(★ 금색 테두리 #F59E0B 2px — 파일럿 A), "NMS-NEW"
+Rebuild: "BILL-MF"(★ 금색 테두리 — 파일럿 B, Critical Path), "STL-MF"
+
+범례(우측 하단 작은 박스):
+- ★ 금색 테두리 = Phase 0 파일럿 (DLR-PORTAL·BILL-MF)
+- 버블 크기 = 연간 운영비 규모
+- DLR-PORTAL 주석: "비즈니스 가치 A / 파일럿 리스크 B (이중 축 병기)"
+
+스타일: 프리미엄 McKinsey/BCG 보고서, 넉넉한 여백, 명확한 그리드라인(#E5E7EB), 산세리프 한국어 폰트 선명 렌더링, flat 2D, 1600×1100 비율.

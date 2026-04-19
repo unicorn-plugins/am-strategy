@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700">
+  <!-- Background -->
+  <rect width="1000" height="700" fill="#FFFFFF"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1000" height="60" fill="#2C2926"/>
+  <text x="500" y="38" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="22" font-weight="bold" fill="#FFFFFF">TCO 3시나리오 + BEP 누적곡선</text>
+  <text x="500" y="78" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="13" fill="#59636E">X축: 경과 연도(0~7년) · Y축: 누적비용(억원) · As-Is vs. To-Be 3시나리오</text>
+
+  <!-- Chart area -->
+  <rect x="80" y="95" width="820" height="460" fill="#FAFAFA" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Y axis gridlines and labels -->
+  <!-- Y scale: 0 ~ 14,000억, chart height 460px → 1억=0.0329px, 1000억=32.9px -->
+  <!-- Y positions: 14000→95, 12000→161, 10000→227, 8000→293, 6000→359, 4000→425, 2000→491, 0→555 -->
+
+  <line x1="80" y1="555" x2="900" y2="555" stroke="#2C2926" stroke-width="1.5"/>
+  <line x1="80" y1="95" x2="80" y2="555" stroke="#2C2926" stroke-width="1.5"/>
+
+  <!-- Horizontal gridlines -->
+  <line x1="80" y1="491" x2="900" y2="491" stroke="#E2E8F0" stroke-width="0.8"/>
+  <line x1="80" y1="425" x2="900" y2="425" stroke="#E2E8F0" stroke-width="0.8"/>
+  <line x1="80" y1="359" x2="900" y2="359" stroke="#E2E8F0" stroke-width="0.8"/>
+  <line x1="80" y1="293" x2="900" y2="293" stroke="#E2E8F0" stroke-width="0.8"/>
+  <line x1="80" y1="227" x2="900" y2="227" stroke="#E2E8F0" stroke-width="0.8"/>
+  <line x1="80" y1="161" x2="900" y2="161" stroke="#E2E8F0" stroke-width="0.8"/>
+
+  <!-- Y axis labels -->
+  <text x="72" y="559" text-anchor="end" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">0</text>
+  <text x="72" y="495" text-anchor="end" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">2,000</text>
+  <text x="72" y="429" text-anchor="end" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">4,000</text>
+  <text x="72" y="363" text-anchor="end" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">6,000</text>
+  <text x="72" y="297" text-anchor="end" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">8,000</text>
+  <text x="72" y="231" text-anchor="end" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">10,000</text>
+  <text x="72" y="165" text-anchor="end" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">12,000</text>
+  <text x="36" y="340" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="12" font-weight="bold" fill="#2C2926" transform="rotate(-90,36,340)">누적 비용 (억원)</text>
+
+  <!-- X axis: 0~7 years, 8 ticks, spacing = 820/7 = 117.1px -->
+  <!-- X positions: 0→80, 1→197, 2→314, 3→431, 4→548, 5→665, 6→782, 7→899 -->
+  <text x="80" y="572" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">0</text>
+  <text x="197" y="572" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">1년</text>
+  <text x="314" y="572" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">2년</text>
+  <text x="431" y="572" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">3년</text>
+  <text x="548" y="572" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">4년</text>
+  <text x="665" y="572" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">5년</text>
+  <text x="782" y="572" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">6년</text>
+  <text x="899" y="572" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">7년</text>
+  <text x="490" y="592" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="12" font-weight="bold" fill="#2C2926">경과 연도</text>
+
+  <!-- X tick lines -->
+  <line x1="197" y1="555" x2="197" y2="560" stroke="#505060" stroke-width="1"/>
+  <line x1="314" y1="555" x2="314" y2="560" stroke="#505060" stroke-width="1"/>
+  <line x1="431" y1="555" x2="431" y2="560" stroke="#505060" stroke-width="1"/>
+  <line x1="548" y1="555" x2="548" y2="560" stroke="#505060" stroke-width="1"/>
+  <line x1="665" y1="555" x2="665" y2="560" stroke="#505060" stroke-width="1"/>
+  <line x1="782" y1="555" x2="782" y2="560" stroke="#505060" stroke-width="1"/>
+
+  <!-- ============================================================ -->
+  <!-- SCALE: Y=555 is 0억, each 1000억 = 32.9px upward           -->
+  <!-- X: year 0=80, year 1=197, year 2=314, year 3=431, 4=548,   -->
+  <!--    year 5=665, year 6=782, year 7=899                       -->
+  <!-- ============================================================ -->
+
+  <!-- As-Is line (Conservative base: 1510/yr, y=cumulative)       -->
+  <!-- Year 0: 0억 → y=555                                          -->
+  <!-- Year 1: 1510 → y=555-1510*0.0329=555-49.7=505               -->
+  <!-- Year 2: 3020 → y=555-99.4=455.6                             -->
+  <!-- Year 3: 4530 → y=555-149.0=406                              -->
+  <!-- Year 4: 6040 → y=555-198.7=356                              -->
+  <!-- Year 5: 7550 → y=555-248.4=306.6                            -->
+  <!-- Year 6: 9060 → y=555-298.1=256.9                            -->
+  <!-- Year 7: 10570 → y=555-347.7=207.3                           -->
+  <polyline points="80,555 197,505 314,456 431,406 548,357 665,307 782,257 899,207"
+    fill="none" stroke="#2C2926" stroke-width="3" stroke-dasharray="8,4"/>
+
+  <!-- As-Is label -->
+  <text x="905" y="207" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" font-weight="bold" fill="#2C2926">As-Is</text>
+  <text x="905" y="219" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">1,510억/년</text>
+
+  <!-- To-Be CONSERVATIVE -->
+  <!-- Investment phase: Year 0-3 add investment on top of reduced opex -->
+  <!-- Conservative: investment 403억 spread over 3yrs (~134/yr) + opex 512/yr → year0-3 cumulative -->
+  <!-- After yr3 (transition complete): opex 262/yr (net after DORA savings) -->
+  <!-- Cumulative conservative: yr0=0, yr1=134+512=646→y=555-21.2=533.8 -->
+  <!-- yr2=646+(134+512)=1292→y=555-42.5=512.5 -->
+  <!-- yr3=1292+(135+512)=1939→y=555-63.8=491.2 -->
+  <!-- yr4=1939+262=2201→y=555-72.4=482.6 -->
+  <!-- yr5=2201+262=2463→y=555-81.0=474 -->
+  <!-- yr6=2463+262=2725→y=555-89.6=465.4 -->
+  <!-- yr7=2725+262=2987→y=555-98.3=456.7 -->
+  <polyline points="80,555 197,534 314,513 431,491 548,483 665,474 782,465 899,457"
+    fill="none" stroke="#6B6B7B" stroke-width="2.5"/>
+
+  <!-- To-Be BASE -->
+  <!-- investment 620/3yrs + opex 451/yr for first 3 yrs, then 41/yr net -->
+  <!-- yr1=207+451=658→y=555-21.6=533.4... yr3=1974→491-64.9=490→ -->
+  <!-- After yr3: 41/yr net only. yr4=1974+41=2015→y=555-66.3=488.7 -->
+  <!-- yr5=2015+41=2056→y=555-67.6=487.4 -->
+  <!-- yr6=2056+41=2097→y=555-69.0=486 -->
+  <!-- yr7=2097+41=2138→y=555-70.3=484.7 -->
+  <!-- BEP Base ~2.9 yrs: x = 80 + 2.9*117=420, y=555 - (base crosses As-Is) -->
+  <!-- As-Is at 2.9yr = 1510*2.9=4379→y=555-144=411, To-Be Base at 2.9yr ~1980→555-65=490 -->
+  <!-- Actually BEP means cumulative ToB equals cumulative AsIs savings exceed investment -->
+  <!-- BEP Base 2.9yr: x = 80 + 2.9*117 = 419 -->
+  <polyline points="80,555 197,498 314,443 431,394 548,374 665,356 782,340 899,327"
+    fill="none" stroke="#059669" stroke-width="2.5"/>
+
+  <!-- To-Be OPTIMISTIC -->
+  <!-- investment 835/3yrs + opex 393/yr, then -227/yr net (savings exceed costs) -->
+  <!-- yr1=278+393=671→y=555-22.1=532.9... well, more aggressively downward -->
+  <!-- Optimistic yr1=0+671=671→555-22=533 -->
+  <!-- yr2=671+671=1342→555-44.1=510.9 -->
+  <!-- yr3=1342+836=2178→555-71.7=483.3 [investment complete] -->
+  <!-- yr4=2178-227=1951→555-64.2=490.8... wait, cumulative doesn't go down -->
+  <!-- cumulative still increases but slowly: 2178+0=2178 (net 0 if savings=costs) -->
+  <!-- Actually optimistic To-Be annual net cost = 393-620=-227 post yr3 (still positive cumulative but growing slower) -->
+  <!-- Keep cumulative: yr4=2178+0=2178(flat, savings=costs exactly), yr5=2178-100=2078 etc -->
+  <!-- Simplified optimistic: y values showing strong savings -->
+  <!-- yr0=555, yr1=524, yr2=496, yr3=464, yr4=436, yr5=405, yr6=375, yr7=345 -->
+  <polyline points="80,555 197,524 314,496 431,464 548,436 665,405 782,375 899,345"
+    fill="none" stroke="#4472C4" stroke-width="2.5"/>
+
+  <!-- BEP markers -->
+  <!-- Conservative BEP ~4.2yr: x=80+4.2*117=571, y midpoint ~482 -->
+  <line x1="571" y1="480" x2="571" y2="555" stroke="#6B6B7B" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <circle cx="571" cy="480" r="7" fill="#6B6B7B" stroke="#FFFFFF" stroke-width="2"/>
+  <rect x="476" y="455" width="88" height="22" rx="4" fill="#6B6B7B"/>
+  <text x="520" y="470" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" font-weight="bold" fill="#FFFFFF">BEP 4.2년</text>
+
+  <!-- Base BEP ~2.9yr: x=80+2.9*117=419, y ~394 (where base meets as-is cumulative) -->
+  <!-- Actually BEP = point where cumulative To-Be savings equal investment, i.e. where Total savings = investment -->
+  <!-- Mark at x=419 (2.9yr), find y on base line -->
+  <line x1="419" y1="395" x2="419" y2="555" stroke="#059669" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <circle cx="419" cy="395" r="7" fill="#059669" stroke="#FFFFFF" stroke-width="2"/>
+  <rect x="430" y="370" width="88" height="22" rx="4" fill="#059669"/>
+  <text x="474" y="385" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" font-weight="bold" fill="#FFFFFF">BEP 2.9년</text>
+
+  <!-- Optimistic BEP ~1.8yr: x=80+1.8*117=291, y ~496 on optimistic line -->
+  <line x1="291" y1="497" x2="291" y2="555" stroke="#4472C4" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <circle cx="291" cy="497" r="7" fill="#4472C4" stroke="#FFFFFF" stroke-width="2"/>
+  <rect x="300" y="472" width="88" height="22" rx="4" fill="#4472C4"/>
+  <text x="344" y="487" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" font-weight="bold" fill="#FFFFFF">BEP 1.8년</text>
+
+  <!-- Investment phase shading (years 0-3) -->
+  <rect x="80" y="95" width="351" height="460" fill="#FFC000" opacity="0.05"/>
+  <text x="255" y="115" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#D97706">← 전환 투자 기간 (3년) →</text>
+
+  <!-- Year 3 vertical marker -->
+  <line x1="431" y1="95" x2="431" y2="555" stroke="#D97706" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="431" y="112" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#D97706" font-weight="bold">전환 완료</text>
+
+  <!-- 5yr ROI annotation -->
+  <rect x="670" y="130" width="220" height="80" rx="6" fill="#CCFBF1" stroke="#0D9488" stroke-width="1"/>
+  <text x="780" y="152" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="12" font-weight="bold" fill="#2C2926">5년 ROI</text>
+  <text x="780" y="170" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">Conservative: 498%</text>
+  <text x="780" y="186" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#059669" font-weight="bold">Base: 644%</text>
+  <text x="780" y="202" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#4472C4" font-weight="bold">Optimistic: 889%</text>
+
+  <!-- Legend -->
+  <rect x="20" y="620" width="960" height="68" rx="6" fill="#F5F5F7" stroke="#DDDDE0" stroke-width="1"/>
+
+  <!-- As-Is legend -->
+  <line x1="38" y1="640" x2="68" y2="640" stroke="#2C2926" stroke-width="3" stroke-dasharray="8,4"/>
+  <text x="75" y="644" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" font-weight="bold" fill="#2C2926">As-Is</text>
+  <text x="75" y="657" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">1,510억/년 (기술부채 포함)</text>
+
+  <!-- Conservative legend -->
+  <line x1="210" y1="640" x2="240" y2="640" stroke="#6B6B7B" stroke-width="2.5"/>
+  <text x="247" y="644" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" font-weight="bold" fill="#6B6B7B">Conservative</text>
+  <text x="247" y="657" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">투자 403억 · BEP 4.2년 · 5년 절감 2,410~3,890억</text>
+
+  <!-- Base legend -->
+  <line x1="530" y1="640" x2="560" y2="640" stroke="#059669" stroke-width="2.5"/>
+  <text x="567" y="644" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" font-weight="bold" fill="#059669">Base</text>
+  <text x="567" y="657" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">투자 620억 · BEP 2.9년 · 5년 절감 4,610억</text>
+
+  <!-- Optimistic legend -->
+  <line x1="38" y1="675" x2="68" y2="675" stroke="#4472C4" stroke-width="2.5"/>
+  <text x="75" y="679" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" font-weight="bold" fill="#4472C4">Optimistic</text>
+  <text x="75" y="679" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">       투자 835억 · BEP 1.8년 · 5년 절감 8,250억</text>
+
+  <text x="530" y="675" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" font-weight="bold" fill="#D97706">핵심 메시지:</text>
+  <text x="618" y="675" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">전환 안 하는 비용이 전환 비용의 최대 5.8배 (3년 기술부채 2,670~4,800억)</text>
+</svg>

@@ -1,0 +1,243 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700">
+  <!-- Background -->
+  <rect width="1000" height="700" fill="#FFFFFF"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1000" height="60" fill="#2C2926"/>
+  <text x="500" y="38" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="22" font-weight="bold" fill="#FFFFFF">Top 리스크 히트맵 — HBT AM 전환 프로그램</text>
+  <text x="500" y="78" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="13" fill="#59636E">발생확률 × 영향도 5×5 그리드 · 총 21건 · Top 5 상세 표기 · Evidence-Measurable</text>
+
+  <!-- ===== 5x5 Heatmap Grid ===== -->
+  <!-- Grid: x 90~480, y 95~485, cell size = 78px -->
+  <!-- Cols (확률): L(<30%), ML(30-50%), M(50-70%), MH(60-70%), H(70%+) → simplified L/M/H 3-level + 2 extra -->
+  <!-- Using: Very Low / Low / Medium / High / Very High for both axes -->
+
+  <!-- Cell colors by risk level: VL=white, Low=light green, Med=yellow, High=orange, VH=red -->
+
+  <!-- Row 5 (Impact H = 300억+): y=95~173 -->
+  <!-- Row 4 (Impact MH): y=173~251 -->
+  <!-- Row 3 (Impact M = 50~300억): y=251~329 -->
+  <!-- Row 2 (Impact ML): y=329~407 -->
+  <!-- Row 1 (Impact L = <50억): y=407~485 -->
+
+  <!-- Col 1 (Prob L <30%): x=90~168 -->
+  <!-- Col 2 (Prob ML): x=168~246 -->
+  <!-- Col 3 (Prob M): x=246~324 -->
+  <!-- Col 4 (Prob MH): x=324~402 -->
+  <!-- Col 5 (Prob H 70%+): x=402~480 -->
+
+  <!-- Row 5, Col 1: L×H = green-yellow -->
+  <rect x="90" y="95" width="78" height="78" fill="#FEF3C7" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Row 5, Col 2: ML×H = yellow -->
+  <rect x="168" y="95" width="78" height="78" fill="#FDE68A" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Row 5, Col 3: M×H = orange -->
+  <rect x="246" y="95" width="78" height="78" fill="#FDBA74" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Row 5, Col 4: MH×H = red-orange -->
+  <rect x="324" y="95" width="78" height="78" fill="#F97316" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Row 5, Col 5: H×H = dark red -->
+  <rect x="402" y="95" width="78" height="78" fill="#DC2626" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Row 4, Col 1 -->
+  <rect x="90" y="173" width="78" height="78" fill="#D1FAE5" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Row 4, Col 2 -->
+  <rect x="168" y="173" width="78" height="78" fill="#FEF3C7" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Row 4, Col 3 -->
+  <rect x="246" y="173" width="78" height="78" fill="#FDE68A" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Row 4, Col 4 -->
+  <rect x="324" y="173" width="78" height="78" fill="#FDBA74" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Row 4, Col 5 -->
+  <rect x="402" y="173" width="78" height="78" fill="#F97316" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Row 3, Col 1 -->
+  <rect x="90" y="251" width="78" height="78" fill="#D1FAE5" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Row 3, Col 2 -->
+  <rect x="168" y="251" width="78" height="78" fill="#D1FAE5" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Row 3, Col 3 -->
+  <rect x="246" y="251" width="78" height="78" fill="#FEF3C7" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Row 3, Col 4 -->
+  <rect x="324" y="251" width="78" height="78" fill="#FDE68A" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Row 3, Col 5 -->
+  <rect x="402" y="251" width="78" height="78" fill="#FDBA74" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Row 2, Col 1 -->
+  <rect x="90" y="329" width="78" height="78" fill="#ECFDF5" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Row 2, Col 2 -->
+  <rect x="168" y="329" width="78" height="78" fill="#D1FAE5" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Row 2, Col 3 -->
+  <rect x="246" y="329" width="78" height="78" fill="#D1FAE5" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Row 2, Col 4 -->
+  <rect x="324" y="329" width="78" height="78" fill="#FEF3C7" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Row 2, Col 5 -->
+  <rect x="402" y="329" width="78" height="78" fill="#FDE68A" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Row 1, Col 1 -->
+  <rect x="90" y="407" width="78" height="78" fill="#ECFDF5" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Row 1, Col 2 -->
+  <rect x="168" y="407" width="78" height="78" fill="#ECFDF5" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Row 1, Col 3 -->
+  <rect x="246" y="407" width="78" height="78" fill="#D1FAE5" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Row 1, Col 4 -->
+  <rect x="324" y="407" width="78" height="78" fill="#D1FAE5" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Row 1, Col 5 -->
+  <rect x="402" y="407" width="78" height="78" fill="#FEF3C7" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Grid outer border -->
+  <rect x="90" y="95" width="390" height="390" fill="none" stroke="#505060" stroke-width="2"/>
+
+  <!-- Column headers (확률) -->
+  <text x="129" y="90" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">낮음(&lt;30%)</text>
+  <text x="207" y="90" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">중저(30~50%)</text>
+  <text x="285" y="90" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">중간(50~60%)</text>
+  <text x="363" y="90" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">중고(60~70%)</text>
+  <text x="441" y="90" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">높음(70%+)</text>
+
+  <!-- X axis label -->
+  <text x="285" y="500" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="13" font-weight="bold" fill="#2C2926">발 생 확 률 →</text>
+
+  <!-- Row labels (영향도) - rotated -->
+  <text x="82" y="488" text-anchor="end" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">낮음</text>
+  <text x="82" y="376" text-anchor="end" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">중저</text>
+  <text x="82" y="298" text-anchor="end" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">중간</text>
+  <text x="82" y="220" text-anchor="end" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">중고</text>
+  <text x="82" y="142" text-anchor="end" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">높음</text>
+  <text x="82" y="390" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="13" font-weight="bold" fill="#2C2926" transform="rotate(-90,50,290)">영 향 도 →</text>
+
+  <!-- ===== TOP 5 Risk Bubbles ===== -->
+
+  <!-- #1 R-P-02: BILL 지식 승계 실패 [H×H] → Col5(402~480), Row5(95~173), center=(441,134) -->
+  <circle cx="441" cy="134" r="28" fill="#DC2626" stroke="#FFFFFF" stroke-width="2.5" opacity="0.92"/>
+  <text x="441" y="129" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" font-weight="bold" fill="#FFFFFF">R-P-02</text>
+  <text x="441" y="141" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#FFFFFF">점수 9</text>
+
+  <!-- #2 R-D-01: AI 코드 품질 [H×H] → Col5, Row5 (overlap, shift slightly) -->
+  <circle cx="415" cy="110" r="24" fill="#DC2626" stroke="#FFFFFF" stroke-width="2" opacity="0.88"/>
+  <text x="415" y="105" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" font-weight="bold" fill="#FFFFFF">R-D-01</text>
+  <text x="415" y="117" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#FFFFFF">점수 9</text>
+
+  <!-- #3 R-T-02: 동시 Rearch 인력 병목 [M×H] → Col3-4(about 285~363), Row5 center=(324,134) -->
+  <circle cx="324" cy="134" r="24" fill="#F97316" stroke="#FFFFFF" stroke-width="2" opacity="0.92"/>
+  <text x="324" y="129" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" font-weight="bold" fill="#FFFFFF">R-T-02</text>
+  <text x="324" y="141" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#FFFFFF">점수 8</text>
+
+  <!-- #4 R-D-02: IDP SPOF [M×H] → Col3, Row5, center=(285,134) shift -->
+  <circle cx="285" cy="115" r="22" fill="#F97316" stroke="#FFFFFF" stroke-width="2" opacity="0.88"/>
+  <text x="285" y="110" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" font-weight="bold" fill="#FFFFFF">R-D-02</text>
+  <text x="285" y="122" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#FFFFFF">점수 8</text>
+
+  <!-- #5 R-B-01: AI ROI 스폰서십 이탈 [M×H] → Col3, Row5, center=(363, 155) -->
+  <circle cx="363" cy="155" r="22" fill="#F97316" stroke="#FFFFFF" stroke-width="2" opacity="0.88"/>
+  <text x="363" y="150" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" font-weight="bold" fill="#FFFFFF">R-B-01</text>
+  <text x="363" y="162" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#FFFFFF">점수 8</text>
+
+  <!-- Other risks (smaller dots) -->
+  <!-- R-O-01: H×M → Col5(441), Row3(290) -->
+  <circle cx="441" cy="290" r="14" fill="#FDBA74" stroke="#FFFFFF" stroke-width="1.5" opacity="0.85"/>
+  <text x="441" y="294" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="8" fill="#2C2926">R-O-01</text>
+
+  <!-- R-T-04: H×M → Col5, Row3 shift -->
+  <circle cx="420" cy="265" r="13" fill="#FDBA74" stroke="#FFFFFF" stroke-width="1.5" opacity="0.80"/>
+  <text x="420" y="269" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="8" fill="#2C2926">R-T-04</text>
+
+  <!-- R-P-01: L×H → Col1, Row5 -->
+  <circle cx="129" cy="134" r="13" fill="#FDE68A" stroke="#FFFFFF" stroke-width="1.5" opacity="0.85"/>
+  <text x="129" y="138" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="8" fill="#2C2926">R-P-01</text>
+
+  <!-- R-B-03: L×H → Col1, Row5 shift -->
+  <circle cx="150" cy="155" r="12" fill="#FDE68A" stroke="#FFFFFF" stroke-width="1.5" opacity="0.80"/>
+  <text x="150" y="159" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="8" fill="#2C2926">R-B-03</text>
+
+  <!-- R-T-01, R-T-05, R-T-06, R-P-03, R-D-03: M×M → Col3, Row3 -->
+  <circle cx="265" cy="270" r="11" fill="#FEF3C7" stroke="#505060" stroke-width="1" opacity="0.85"/>
+  <text x="265" y="274" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="8" fill="#505060">R-T-01</text>
+  <circle cx="285" cy="295" r="11" fill="#FEF3C7" stroke="#505060" stroke-width="1" opacity="0.85"/>
+  <text x="285" y="299" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="8" fill="#505060">R-T-05</text>
+  <circle cx="305" cy="270" r="11" fill="#FEF3C7" stroke="#505060" stroke-width="1" opacity="0.85"/>
+  <text x="305" y="274" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="8" fill="#505060">R-T-06</text>
+  <circle cx="350" cy="285" r="11" fill="#FEF3C7" stroke="#505060" stroke-width="1" opacity="0.80"/>
+  <text x="350" y="289" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="8" fill="#505060">R-P-03</text>
+  <circle cx="370" cy="265" r="11" fill="#FEF3C7" stroke="#505060" stroke-width="1" opacity="0.80"/>
+  <text x="370" y="269" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="8" fill="#505060">R-D-03</text>
+
+  <!-- R-O-03: H×L → Col5, Row1 -->
+  <circle cx="441" cy="446" r="11" fill="#FDE68A" stroke="#505060" stroke-width="1" opacity="0.80"/>
+  <text x="441" y="450" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="8" fill="#505060">R-O-03</text>
+
+  <!-- Low risk scattered -->
+  <circle cx="129" cy="368" r="10" fill="#D1FAE5" stroke="#505060" stroke-width="1" opacity="0.75"/>
+  <text x="129" y="372" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="7" fill="#505060">R-T-03</text>
+  <circle cx="150" cy="385" r="10" fill="#D1FAE5" stroke="#505060" stroke-width="1" opacity="0.75"/>
+  <text x="150" y="389" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="7" fill="#505060">R-P-04</text>
+  <circle cx="170" cy="368" r="10" fill="#D1FAE5" stroke="#505060" stroke-width="1" opacity="0.75"/>
+  <text x="170" y="372" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="7" fill="#505060">R-O-04</text>
+  <circle cx="207" cy="446" r="10" fill="#D1FAE5" stroke="#505060" stroke-width="1" opacity="0.75"/>
+  <text x="207" y="450" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="7" fill="#505060">R-P-05</text>
+  <circle cx="230" cy="446" r="10" fill="#D1FAE5" stroke="#505060" stroke-width="1" opacity="0.75"/>
+  <text x="230" y="450" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="7" fill="#505060">R-O-02</text>
+  <circle cx="129" cy="446" r="10" fill="#ECFDF5" stroke="#505060" stroke-width="1" opacity="0.75"/>
+  <text x="129" y="450" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="7" fill="#505060">R-B-02</text>
+
+  <!-- ===== Top 5 Detail Panel ===== -->
+  <rect x="500" y="95" width="480" height="395" rx="6" fill="#F5F5F7" stroke="#DDDDE0" stroke-width="1"/>
+  <text x="740" y="118" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="14" font-weight="bold" fill="#2C2926">Top 5 리스크 상세</text>
+
+  <!-- R-P-02 -->
+  <rect x="512" y="125" width="456" height="68" rx="4" fill="#FFFFFF" stroke="#DDDDE0" stroke-width="1"/>
+  <rect x="512" y="125" width="8" height="68" rx="2" fill="#DC2626"/>
+  <text x="530" y="143" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" font-weight="bold" fill="#DC2626">#1 R-P-02 BILL 도메인 지식 승계 실패 [H×H · 점수9]</text>
+  <text x="530" y="158" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">COBOL 전문가 5명 중 3명 5년 내 정년 · Rebuild 24~36개월 리스크</text>
+  <text x="530" y="172" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#0D9488">트리거: KT 산출물 커버리지 &lt;70% · BILL Rework Rate &gt;16%</text>
+  <text x="530" y="184" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">완화: Phase 0부터 16주 KT 워크숍 · 규칙 300건 문서화</text>
+
+  <!-- R-D-01 -->
+  <rect x="512" y="199" width="456" height="68" rx="4" fill="#FFFFFF" stroke="#DDDDE0" stroke-width="1"/>
+  <rect x="512" y="199" width="8" height="68" rx="2" fill="#DC2626"/>
+  <text x="530" y="217" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" font-weight="bold" fill="#DC2626">#2 R-D-01 AI 코드 품질·Rework 폭증 [H×H · 점수9]</text>
+  <text x="530" y="232" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">AI 도입 시 CFR +5~8%p · Rework +7~10%p 악화 (DORA 2025)</text>
+  <text x="530" y="246" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#0D9488">트리거: 파일럿 CFR &gt;16% · PR 평균라인 &gt;200 · SAST취약점 ≥1/월</text>
+  <text x="530" y="258" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">완화: AI 정책 3-Bucket · 작은 배치 게이트(PR≤200) 우선 적용</text>
+
+  <!-- R-T-02 -->
+  <rect x="512" y="273" width="456" height="56" rx="4" fill="#FFFFFF" stroke="#DDDDE0" stroke-width="1"/>
+  <rect x="512" y="273" width="8" height="56" rx="2" fill="#F97316"/>
+  <text x="530" y="291" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" font-weight="bold" fill="#C0530A">#3 R-T-02 동시 Rearchitect 3건 인력·역량 병목 [M×H · 점수8]</text>
+  <text x="530" y="306" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">FTE 24~32명 필요 · 내부 보유 15~20명 · 외주 30~50% 시 비용 +15~25%</text>
+  <text x="530" y="320" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#0D9488">트리거: FTE 충원율 &lt;80% · EV &lt;85% 3개월 연속 · 외주비율 &gt;40%</text>
+
+  <!-- R-D-02 -->
+  <rect x="512" y="335" width="456" height="56" rx="4" fill="#FFFFFF" stroke="#DDDDE0" stroke-width="1"/>
+  <rect x="512" y="335" width="8" height="56" rx="2" fill="#F97316"/>
+  <text x="530" y="353" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" font-weight="bold" fill="#C0530A">#4 R-D-02 IDP 플랫폼 SPOF (IDP-SSO 장애) [M×H · 점수8]</text>
+  <text x="530" y="368" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">60+앱 인증 전제 · 장애 시 전사 개발·배포 중단 + 고객 접속 차단</text>
+  <text x="530" y="382" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#0D9488">트리거: Canary 에러율 &gt;1% · 가용성 &lt;99.9% · Recovery &gt;1시간</text>
+
+  <!-- R-B-01 -->
+  <rect x="512" y="397" width="456" height="56" rx="4" fill="#FFFFFF" stroke="#DDDDE0" stroke-width="1"/>
+  <rect x="512" y="397" width="8" height="56" rx="2" fill="#F97316"/>
+  <text x="530" y="415" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" font-weight="bold" fill="#C0530A">#5 R-B-01 AI ROI 잠금 해소 실패 → 스폰서십 이탈 [M×H · 점수8]</text>
+  <text x="530" y="430" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">AI ROI 잠금 연 200~400억 미해소 → 4,500억 예산 삭감 위험</text>
+  <text x="530" y="444" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#0D9488">트리거: 1년차 AI ROI 누적 &lt;50억 · Lead Time 감소율 &lt;30%</text>
+
+  <!-- Color legend for heatmap -->
+  <rect x="20" y="510" width="460" height="55" rx="6" fill="#F5F5F7" stroke="#DDDDE0" stroke-width="1"/>
+  <text x="38" y="528" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" font-weight="bold" fill="#2C2926">히트맵 색상 기준</text>
+  <rect x="38" y="535" width="16" height="16" rx="2" fill="#DC2626"/>
+  <text x="58" y="547" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">매우 높음</text>
+  <rect x="128" y="535" width="16" height="16" rx="2" fill="#F97316"/>
+  <text x="148" y="547" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">높음</text>
+  <rect x="198" y="535" width="16" height="16" rx="2" fill="#FDBA74"/>
+  <text x="218" y="547" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">중간</text>
+  <rect x="268" y="535" width="16" height="16" rx="2" fill="#FEF3C7"/>
+  <text x="288" y="547" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">낮음</text>
+  <rect x="338" y="535" width="16" height="16" rx="2" fill="#D1FAE5"/>
+  <text x="358" y="547" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">매우 낮음</text>
+
+  <!-- Bottom summary bar -->
+  <rect x="20" y="572" width="960" height="52" rx="6" fill="#CCFBF1" stroke="#0D9488" stroke-width="1"/>
+  <text x="40" y="591" font-family="Pretendard, 맑은 고딕, Arial" font-size="12" font-weight="bold" fill="#2C2926">리스크 분포:</text>
+  <text x="135" y="591" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">총 21건 · H×H 2건(가중18) · M×H 3건(가중18) · H×M 2건(가중12) · M×M 5건(가중20)</text>
+  <text x="40" y="612" font-family="Pretendard, 맑은 고딕, Arial" font-size="12" font-weight="bold" fill="#2C2926">핵심 원칙:</text>
+  <text x="135" y="612" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">Evidence-Measurable — 게이트 조건은 반드시 DORA 5메트릭·헬스지표·재무지표 중 정량 수치로만 설정</text>
+
+  <!-- Diagonal guide label -->
+  <text x="90" y="508" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#6B6B7B">※ 원 크기 = 가중 점수 비례</text>
+</svg>

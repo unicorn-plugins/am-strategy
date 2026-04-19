@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700">
+  <!-- Background -->
+  <rect width="1000" height="700" fill="#FFFFFF"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1000" height="60" fill="#2C2926"/>
+  <text x="500" y="38" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="22" font-weight="bold" fill="#FFFFFF">Phase 0 → 4 로드맵 — HBT AM 전환 포트폴리오</text>
+  <text x="500" y="78" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="13" fill="#59636E">2026.05 ~ 2029.09 · 30~42개월 · Range-Based · Gate-Disciplined</text>
+
+  <!-- Timeline header bar -->
+  <rect x="195" y="90" width="785" height="28" rx="4" fill="#E2EEF9"/>
+
+  <!-- Month markers: 2026.05 ~ 2029.12, ~42 months, each ~18.7px -->
+  <!-- Key dates: 2026.05=195, 2026.08=251, 2027.01=307+, 2027.04=363, 2028.01=531, 2028.09=681, 2029.03=793, 2029.09=905 -->
+  <!-- Scale: 195px start, 785px wide, 42 months = ~18.7px/month -->
+
+  <text x="195" y="108" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#2C2926" font-weight="bold">2026.05</text>
+  <text x="289" y="108" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#2C2926">2026.10</text>
+  <text x="383" y="108" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#2C2926">2027.03</text>
+  <text x="477" y="108" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#2C2926">2027.08</text>
+  <text x="571" y="108" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#2C2926">2028.01</text>
+  <text x="665" y="108" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#2C2926">2028.06</text>
+  <text x="759" y="108" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#2C2926">2028.11</text>
+  <text x="853" y="108" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#2C2926">2029.04</text>
+  <text x="947" y="108" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#2C2926" font-weight="bold">2029.09</text>
+
+  <!-- Vertical grid lines -->
+  <line x1="289" y1="118" x2="289" y2="600" stroke="#E2E8F0" stroke-width="0.8"/>
+  <line x1="383" y1="118" x2="383" y2="600" stroke="#E2E8F0" stroke-width="0.8"/>
+  <line x1="477" y1="118" x2="477" y2="600" stroke="#E2E8F0" stroke-width="0.8"/>
+  <line x1="571" y1="118" x2="571" y2="600" stroke="#E2E8F0" stroke-width="0.8"/>
+  <line x1="665" y1="118" x2="665" y2="600" stroke="#E2E8F0" stroke-width="0.8"/>
+  <line x1="759" y1="118" x2="759" y2="600" stroke="#E2E8F0" stroke-width="0.8"/>
+  <line x1="853" y1="118" x2="853" y2="600" stroke="#E2E8F0" stroke-width="0.8"/>
+
+  <!-- Scale reference: 2026.05=195, 1month=18.7px -->
+  <!-- 2026.05→0m, 2026.08→3m(+56), 2026.09→4m(+75), 2026.10→5m(+94), 2027.01→8m(+150), 2027.04→11m(+206) -->
+  <!-- 2027.06→13m(+243), 2027.10→17m(+318), 2028.01→20m(+374), 2028.06→25m(+468), 2028.09→28m(+524) -->
+  <!-- 2029.01→32m(+598), 2029.03→34m(+636), 2029.09→40m(+748) end=943 -->
+
+  <!-- ===== ROW LABELS ===== -->
+  <rect x="0" y="125" width="190" height="28" rx="3" fill="#2C2926"/>
+  <text x="95" y="144" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="12" font-weight="bold" fill="#FFFFFF">Phase 0 · 분석·기반</text>
+
+  <rect x="0" y="200" width="190" height="28" rx="3" fill="#059669"/>
+  <text x="95" y="219" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="12" font-weight="bold" fill="#FFFFFF">Phase 1 · Quick Win</text>
+
+  <rect x="0" y="270" width="190" height="28" rx="3" fill="#FFC000"/>
+  <text x="95" y="289" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="12" font-weight="bold" fill="#2C2926">Phase 1' · 파일럿</text>
+
+  <rect x="0" y="340" width="190" height="28" rx="3" fill="#4472C4"/>
+  <text x="95" y="359" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="12" font-weight="bold" fill="#FFFFFF">Phase 2 · Rearch/Ref</text>
+
+  <rect x="0" y="430" width="190" height="28" rx="3" fill="#DC2626"/>
+  <text x="95" y="449" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="12" font-weight="bold" fill="#FFFFFF">Phase 3 · Rebuild</text>
+
+  <rect x="0" y="510" width="190" height="28" rx="3" fill="#7C3AED"/>
+  <text x="95" y="529" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="12" font-weight="bold" fill="#FFFFFF">Phase 4 · 잔여·안정화</text>
+
+  <!-- ===== PHASE 0 BARS (2026.05~2026.09 = 4~6m) ===== -->
+  <!-- Full span: 195→289 (4m), extend to ~307 (6m) -->
+  <rect x="195" y="128" width="150" height="22" rx="4" fill="#2C2926" opacity="0.75"/>
+  <text x="270" y="143" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#FFFFFF">플랫폼 자가평가 · VSM · AI역량 베이스라인</text>
+  <!-- Budget/duration label -->
+  <text x="355" y="143" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">4~6개월</text>
+
+  <!-- Gate 0→1: diamond at 289 -->
+  <polygon points="289,125 297,139 289,153 281,139" fill="#FFC000" stroke="#2C2926" stroke-width="1.5"/>
+  <text x="289" y="168" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" font-weight="bold" fill="#2C2926">GATE 0</text>
+  <text x="289" y="178" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#505060">DORA 측정</text>
+  <text x="289" y="188" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#505060">완료·파일럿</text>
+  <text x="289" y="198" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#505060">승인</text>
+
+  <!-- ===== PHASE 1 BARS (2026.08~2027.04 = 6~10m) ===== -->
+  <!-- start: 2026.08 = +3m = 195+56=251, end: 2027.04 = +11m = 195+206=401 -->
+  <rect x="251" y="203" width="150" height="22" rx="4" fill="#059669" opacity="0.85"/>
+  <text x="326" y="218" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#FFFFFF">Replatform 4 · Rehost 1 · Retire 1 · PAY · MY</text>
+
+  <!-- Budget label -->
+  <text x="410" y="218" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">6~10개월</text>
+  <text x="410" y="230" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#0284C7">예산 ~100~200억</text>
+
+  <!-- Gate 1→2: diamond at 401 -->
+  <polygon points="401,200 409,214 401,228 393,214" fill="#FFC000" stroke="#2C2926" stroke-width="1.5"/>
+  <text x="401" y="243" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" font-weight="bold" fill="#2C2926">GATE 1</text>
+  <text x="401" y="253" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#505060">배포주기</text>
+  <text x="401" y="263" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#505060">주1회↑</text>
+  <text x="401" y="273" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#505060">LT≤1주</text>
+
+  <!-- ===== PHASE 1' PILOT (2026.08~2027.02 = 4~6m) ===== -->
+  <!-- 2026.08=251, 2027.02=+9m=195+168=363 -->
+  <rect x="251" y="273" width="112" height="22" rx="4" fill="#FFC000" opacity="0.90" stroke="#2C2926" stroke-width="1"/>
+  <text x="307" y="288" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#2C2926" font-weight="bold">DLR-PORTAL ⭐ · PROD-CAT</text>
+  <text x="373" y="288" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">4~6개월</text>
+
+  <!-- ===== PHASE 2 BARS (2027.01~2028.06 = 14~18m) ===== -->
+  <!-- 2027.01 = +8m = 195+150=345, 2028.06 = +25m = 195+468=663 -->
+  <rect x="345" y="343" width="318" height="22" rx="4" fill="#4472C4" opacity="0.85"/>
+  <text x="504" y="358" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#FFFFFF">Refactor 4 · Rearchitect 5 (CRM·ORD·NMS·PRV·DW) · Replace 1</text>
+
+  <text x="673" y="358" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">14~18개월</text>
+  <text x="673" y="370" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#0284C7">예산 ~200~380억</text>
+
+  <!-- Gate 2→3: diamond at 663 -->
+  <polygon points="663,340 671,354 663,368 655,354" fill="#FFC000" stroke="#2C2926" stroke-width="1.5"/>
+  <text x="663" y="383" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" font-weight="bold" fill="#2C2926">GATE 2</text>
+  <text x="663" y="393" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#505060">배포일1회↑</text>
+  <text x="663" y="403" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#505060">AI역량≥3</text>
+  <text x="663" y="413" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#505060">BILL KT완료</text>
+
+  <!-- ===== PHASE 3 BARS (2027.10~2029.03 = 16~20m) ===== -->
+  <!-- 2027.10 = +17m = 195+318=513, 2029.03 = +34m = 195+636=831 -->
+  <rect x="513" y="433" width="318" height="22" rx="4" fill="#DC2626" opacity="0.85"/>
+  <text x="672" y="448" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#FFFFFF">FLT-MGT Rebuild · BILL-MF Rebuild (Critical Path 24~36개월)</text>
+
+  <text x="840" y="448" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">16~20개월</text>
+  <text x="840" y="460" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#DC2626">예산 ~100~200억</text>
+
+  <!-- Gate 3→4: diamond at 831 -->
+  <polygon points="831,430 839,444 831,458 823,444" fill="#FFC000" stroke="#2C2926" stroke-width="1.5"/>
+  <text x="831" y="473" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" font-weight="bold" fill="#2C2926">GATE 3</text>
+  <text x="831" y="483" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#505060">FLT완료</text>
+  <text x="831" y="493" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#505060">BILL 70%↑</text>
+
+  <!-- BILL-MF critical path extension into Phase 4 -->
+  <rect x="513" y="456" width="430" height="12" rx="3" fill="#DC2626" opacity="0.35"/>
+  <text x="728" y="466" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#2C2926">▶ BILL-MF Critical Path (Phase 3~4 연속)</text>
+
+  <!-- ===== PHASE 4 BARS (2028.09~2029.09 = 10~14m) ===== -->
+  <!-- 2028.09 = +28m = 195+524=719, 2029.09 = +40m = 195+748=943 -->
+  <rect x="719" y="513" width="224" height="22" rx="4" fill="#7C3AED" opacity="0.85"/>
+  <text x="831" y="528" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#FFFFFF">STL-MF Rebuild · IDC 재평가 · AI 7역량 완성</text>
+
+  <text x="719" y="555" font-family="Pretendard, 맑은 고딕, Arial" font-size="10" fill="#505060">10~14개월</text>
+  <text x="719" y="567" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#7C3AED">예산 ~100~200억</text>
+
+  <!-- Gate 4 final: diamond at 943 -->
+  <polygon points="943,510 951,524 943,538 935,524" fill="#059669" stroke="#2C2926" stroke-width="1.5"/>
+  <text x="943" y="553" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" font-weight="bold" fill="#059669">종료</text>
+  <text x="943" y="563" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#505060">Cluster6/7</text>
+  <text x="943" y="573" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="9" fill="#505060">≥50%</text>
+
+  <!-- ===== Summary row ===== -->
+  <rect x="0" y="590" width="1000" height="3" fill="#E2E8F0"/>
+
+  <!-- Bottom info strip -->
+  <rect x="20" y="600" width="460" height="56" rx="6" fill="#F5F5F7" stroke="#DDDDE0" stroke-width="1"/>
+  <text x="38" y="620" font-family="Pretendard, 맑은 고딕, Arial" font-size="12" font-weight="bold" fill="#2C2926">총 프로그램 범위</text>
+  <text x="38" y="638" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">기간: 30~42개월 · 예산: Conservative 403억 ~ Optimistic 835억</text>
+  <text x="38" y="652" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">Critical Path: BILL-MF Rebuild 24~36개월 (Phase 3~4 연속)</text>
+
+  <rect x="500" y="600" width="480" height="56" rx="6" fill="#CCFBF1" stroke="#0D9488" stroke-width="1"/>
+  <text x="520" y="620" font-family="Pretendard, 맑은 고딕, Arial" font-size="12" font-weight="bold" fill="#2C2926">Phase별 DORA 진입 목표</text>
+  <text x="520" y="638" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">Gate1: Top 76.1% · Gate2: Top 44.6% · Gate3: Top 44.6%↑</text>
+  <text x="520" y="652" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">종료: Top 24.4% · AI 7역량 ≥3.5 · AI ROI 잠금 해소 360~1,080억</text>
+</svg>

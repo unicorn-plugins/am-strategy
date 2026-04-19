@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700">
+  <!-- Background -->
+  <rect width="1000" height="700" fill="#FFFFFF"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1000" height="60" fill="#2C2926"/>
+  <text x="500" y="38" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="22" font-weight="bold" fill="#FFFFFF">AM 전환 WHY — 5동인 (4S + 혁신)</text>
+
+  <!-- Subtitle -->
+  <text x="500" y="78" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="13" fill="#59636E">HBT 구조적 위기 해결의 유일한 전략적 투자 · DORA 2025 + 행안부 공식 검증</text>
+
+  <!-- Center circle -->
+  <circle cx="500" cy="380" r="65" fill="#2C2926"/>
+  <text x="500" y="373" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="14" font-weight="bold" fill="#FFFFFF">AM 전환</text>
+  <text x="500" y="393" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="12" fill="#CCFBF1">WHY</text>
+
+  <!-- Pentagon lines from center -->
+  <line x1="500" y1="315" x2="500" y2="178" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="500" y1="315" x2="652" y2="225" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="500" y1="315" x2="596" y2="480" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="500" y1="315" x2="404" y2="480" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="500" y1="315" x2="348" y2="225" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- ===== DRIVER 1: Speedy (Top) ===== -->
+  <g transform="translate(500,120)">
+    <rect x="-110" y="-42" width="220" height="100" rx="12" fill="#4472C4"/>
+    <text x="0" y="-18" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="15" font-weight="bold" fill="#FFFFFF">Speedy</text>
+    <text x="0" y="2" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="12" fill="#CCFBF1">출시 지연 → 번호이동 유출</text>
+    <rect x="-90" y="14" width="180" height="30" rx="6" fill="rgba(255,255,255,0.15)"/>
+    <text x="0" y="34" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#FFFFFF">Lead Time 22주 → Top 25% 진입</text>
+    <text x="0" y="-58" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">업계 평균 8주의 2.75배</text>
+  </g>
+
+  <!-- ===== DRIVER 2: Service Always (Top-Right) ===== -->
+  <g transform="translate(700,235)">
+    <rect x="-115" y="-42" width="230" height="100" rx="12" fill="#059669"/>
+    <text x="0" y="-18" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="15" font-weight="bold" fill="#FFFFFF">Service Always</text>
+    <text x="0" y="2" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="12" fill="#CCFBF1">장애 4시간 → B2B 신뢰 위협</text>
+    <rect x="-100" y="14" width="200" height="30" rx="6" fill="rgba(255,255,255,0.15)"/>
+    <text x="0" y="34" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#FFFFFF">MTTR Recovery Top 21% 진입</text>
+    <text x="0" y="-58" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">근로복지공단 23배 단축 사례</text>
+  </g>
+
+  <!-- ===== DRIVER 3: Innovation (Bottom-Right) ===== -->
+  <g transform="translate(660,510)">
+    <rect x="-115" y="-42" width="230" height="100" rx="12" fill="#7C3AED"/>
+    <text x="0" y="-18" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="15" font-weight="bold" fill="#FFFFFF">Innovation</text>
+    <text x="0" y="2" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="12" fill="#CCFBF1">AI ROI 잠금 연 200~400억</text>
+    <rect x="-100" y="14" width="200" height="30" rx="6" fill="rgba(255,255,255,0.15)"/>
+    <text x="0" y="34" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#FFFFFF">AM 완료 = AI 7역량 잠금 해제</text>
+    <text x="0" y="72" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">DORA 2025: 고품질 플랫폼 없이 ROI ~0</text>
+  </g>
+
+  <!-- ===== DRIVER 4: Save Cost (Bottom-Left) ===== -->
+  <g transform="translate(340,510)">
+    <rect x="-115" y="-42" width="230" height="100" rx="12" fill="#D97706"/>
+    <text x="0" y="-18" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="15" font-weight="bold" fill="#FFFFFF">Save Cost</text>
+    <text x="0" y="2" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="12" fill="#FFFFFF">IT운영비 증가 > 매출 증가</text>
+    <rect x="-100" y="14" width="200" height="30" rx="6" fill="rgba(255,255,255,0.15)"/>
+    <text x="0" y="34" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#FFFFFF">3년 누적 10~15% 절감 목표</text>
+    <text x="0" y="72" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">행안부 7년 TCO 18.4% 절감 실증</text>
+  </g>
+
+  <!-- ===== DRIVER 5: Security (Top-Left) ===== -->
+  <g transform="translate(300,235)">
+    <rect x="-115" y="-42" width="230" height="100" rx="12" fill="#DC2626"/>
+    <text x="0" y="-18" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="15" font-weight="bold" fill="#FFFFFF">Security</text>
+    <text x="0" y="2" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="12" fill="#FFFFFF">규제 시정명령 3년 2건</text>
+    <rect x="-100" y="14" width="200" height="30" rx="6" fill="rgba(255,255,255,0.15)"/>
+    <text x="0" y="34" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#FFFFFF">Critical 취약점 0 유지 목표</text>
+    <text x="0" y="-58" text-anchor="middle" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">EOL 스택 보안 ALE 15~40억/년</text>
+  </g>
+
+  <!-- Key metrics bar -->
+  <rect x="20" y="636" width="960" height="52" rx="8" fill="#F5F5F7" stroke="#DDDDE0" stroke-width="1"/>
+  <text x="40" y="656" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" font-weight="bold" fill="#2C2926">HBT 현황 지표:</text>
+  <text x="155" y="656" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">IT운영비 연 +7.3%</text>
+  <text x="280" y="656" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">|</text>
+  <text x="295" y="656" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">신상품 출시 22주</text>
+  <text x="415" y="656" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">|</text>
+  <text x="430" y="656" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">장애 MTTR 4시간</text>
+  <text x="550" y="656" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">|</text>
+  <text x="565" y="656" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">배포 월 1회</text>
+  <text x="655" y="656" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">|</text>
+  <text x="670" y="656" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">레거시 비중 72%</text>
+
+  <text x="40" y="678" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" font-weight="bold" fill="#059669">3년 투자:</text>
+  <text x="110" y="678" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">Conservative 403억 ~ Optimistic 835억</text>
+  <text x="335" y="678" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">|</text>
+  <text x="350" y="678" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" font-weight="bold" fill="#059669">BEP:</text>
+  <text x="385" y="678" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">Base 2.9년 / Optimistic 1.8년</text>
+  <text x="575" y="678" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">|</text>
+  <text x="590" y="678" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" font-weight="bold" fill="#059669">5년 ROI:</text>
+  <text x="650" y="678" font-family="Pretendard, 맑은 고딕, Arial" font-size="11" fill="#505060">498% ~ 889%</text>
+</svg>

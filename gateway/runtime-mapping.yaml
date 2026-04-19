@@ -11,14 +11,14 @@ tier_mapping:
     HIGH:
       model: "claude-opus-4-7"
     MEDIUM:
-      model: "claude-sonnet-4-5"
+      model: "claude-sonnet-4-6"
     LOW:
       model: "claude-haiku-4-5"
 
   # 에이전트별/세부역할별 예외 (비용 최적화)
   inventory-analyst:
     MEDIUM:
-      model: "claude-sonnet-4-5"
+      model: "claude-sonnet-4-6"
     sub_roles:
       code-scan-reader:
         MEDIUM:
