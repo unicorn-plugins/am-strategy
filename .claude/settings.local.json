@@ -5,7 +5,8 @@
       "Write(C:\\Users\\hiond\\workspace\\dmap/**)",
       "Edit(C:\\Users\\hiond\\workspace\\dmap/**)",
       "Bash(python C:\\Users\\hiond\\workspace\\dmap/**)",
-      "Bash(python3 C:\\Users\\hiond\\workspace\\dmap/**)"
+      "Bash(python3 C:\\Users\\hiond\\workspace\\dmap/**)",
+      "Bash(rtk git *)"
     ],
     "additionalDirectories": [
       "C:\\Users\\hiond\\workspace\\dmap"
