@@ -1,0 +1,10 @@
+tools:
+  - name: file_read
+    description: "strategy-report.md, step1~3 산출물, DMAP pptx-build-guide.md, am-ppt-addendum.md 읽기"
+    input: { 파일경로 }
+    output: { 파일내용 }
+
+  - name: file_write
+    description: "ppt-spec.md 저장 (output/{project}/final/ppt-spec.md)"
+    input: { 저장경로, 본문 }
+    output: { 저장결과 }

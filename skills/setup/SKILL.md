@@ -1,6 +1,6 @@
 ---
 name: setup
-description: am-strategy 플러그인 초기 설정 — install.yaml 기반 커스텀 도구 설치, .env 안내, 활성화 라우팅 등록
+description: am-strategy 플러그인 초기 설정 — install.yaml 기반 커스텀 도구 + DMAP Office 빌더 런타임(Node·Python) 설치, .env 안내, 활성화 라우팅 등록
 type: setup
 user-invocable: true
 ---
@@ -12,8 +12,9 @@ user-invocable: true
 ## 목표
 
 am-strategy 플러그인의 초기 설정을 수행함.
-`gateway/install.yaml`을 읽어 커스텀 도구의 Python 의존성 설치 필요성을 안내하고,
-`.env` 템플릿 복사 가이드, 활성화 라우팅 테이블 등록까지 완료하여 플러그인을 즉시 사용할 수 있는 상태로 만듦.
+`gateway/install.yaml`을 읽어 **커스텀 도구 Python 의존성 + DMAP Office 빌더 런타임 의존성(pptxgenjs·python-docx)**
+설치 필요성을 안내하고, `.env` 템플릿 복사 가이드, 활성화 라우팅 테이블 등록까지 완료하여
+플러그인을 즉시 사용할 수 있는 상태로 만듦.
 
 ## 활성화 조건
 
@@ -26,6 +27,7 @@ AskUserQuestion을 사용하여 다음 분기를 수집함:
 - 모델 최신화 적용 여부: `최신 버전으로 업데이트` / `현재 설정 유지`
 - `.env` 파일 생성 및 API Key 입력: `지금 입력 (대화형)` / `빈 템플릿 생성` / `나중에 수동 생성`
 - Python 의존성 설치 여부: `pip install 실행` / `건너뛰기`
+- Node 의존성 설치 여부: `npm install 실행` / `건너뛰기` (pptxgenjs 필수)
 
 ## 워크플로우
 
@@ -42,19 +44,50 @@ AskUserQuestion을 사용하여 다음 분기를 수집함:
 
 ### Step 2: install.yaml 파싱 및 안내
 
-`install.yaml`을 파싱하여 `custom_tools` 목록 출력.
-이 플러그인은 MCP·LSP 서버 없이 커스텀 Python 도구 2종만 의존함을 안내.
+`install.yaml`을 파싱하여 다음 2개 섹션을 출력:
+- `custom_tools` (Python 기반 커스텀 도구)
+- `runtime_dependencies` (DMAP Office 빌더 런타임 — pptxgenjs, python-docx)
 
-### Step 3: Python 의존성 안내
+이 플러그인은 MCP·LSP 서버 없이 커스텀 Python 도구 + Office 빌더 런타임 의존성만 가짐을 안내.
 
-커스텀 도구 2종의 Python 패키지 의존성 안내:
+### Step 3: 런타임 의존성 설치 (Python · Node)
+
+#### 3-1. Python 패키지 (custom_tools + DOCX 빌더)
+
 - `generate_image.py`: `google-genai`, `python-dotenv`, `Pillow`
 - `convert-to-markdown.py`: `python-pptx`, `python-docx`, `openpyxl`, `groq`, `python-dotenv`
+- DOCX 빌더(`python-docx`): `install.yaml`의 `runtime_dependencies`에서 검증
 
-사용자 동의 시 {tool:bash}로 다음 명령 실행 옵션 제공:
+사용자 동의 시 {tool:bash}로 일괄 설치:
 ```bash
 pip install google-genai python-dotenv Pillow python-pptx python-docx openpyxl groq
 ```
+
+#### 3-2. Node 패키지 (PPT 빌더)
+
+- `install.yaml`의 `runtime_dependencies` 항목 중 `runtime: node` 엔트리(`pptxgenjs`) 처리
+- 사전 요구: `node --version`으로 `v18` 이상 확인. 미설치 시 Node.js 18+ 설치 안내(https://nodejs.org/)
+- `npm --version` 확인 후 해당 엔트리의 `check` 실행 → 실패 시 사용자 동의하 `install` 실행:
+  ```bash
+  npm install pptxgenjs
+  ```
+- **설치 위치**: **플러그인 루트**(`am-strategy/`)에 `package.json` + `node_modules/` 배치
+  - 사유: 빌드는 `output/{project}/final/build-pptx.js`에서 실행되며, Node 모듈 해석은
+    스크립트 디렉토리에서 시작해 상위로 탐색함. 플러그인 루트에 두어야
+    `final/ → {project}/ → output/ → am-strategy/node_modules/` 순으로 해석 성공.
+    `gateway/`는 `output/`과 형제라 해석 경로에 포함되지 않음.
+  - `package.json` 부재 시 루트에서 `npm init -y` → `npm install pptxgenjs`
+  - `.gitignore`에 `node_modules/` 등록 권장
+- 설치 검증: `cd output && node -e "require('pptxgenjs')"` 실행 → 오류 없어야 함 (실사용 CWD에서 해석 보장)
+
+#### 3-3. runtime_dependencies 자동 검증 루프
+
+`install.yaml`의 `runtime_dependencies` 각 엔트리에 대해:
+1. 사전 런타임(node ≥18 / python ≥3.9) 확인
+2. 해당 엔트리의 `check` 명령 실행
+3. exit code 0이면 이미 설치됨 → 표시
+4. 실패 시 사용자에게 `install` 명령 실행 동의 요청 → 동의 시 실행
+5. 설치 후 `check` 재실행으로 결과 검증
 
 이 단계는 `ulw` 매직 키워드를 활용하여 수행.
 
@@ -103,12 +136,7 @@ pip install google-genai python-dotenv Pillow python-pptx python-docx openpyxl g
    - `.gitignore`에 `gateway/.env` 등록 권장 (미등록 시 자동 추가)
 6. 입력 결과 요약 (마스킹 처리 — 예: `GEMINI_API_KEY=AIza****...`)
 
-### Step 6: anthropic-skills 설치 확인
-
-doc-exporter 에이전트가 사용하는 `anthropic-skills:docx/pptx` 설치 여부 확인.
-미설치 시 설치 안내 (선택 — required: false).
-
-### Step 7: 활성화 라우팅 등록
+### Step 6: 활성화 라우팅 등록
 
 AskUserQuestion으로 적용 범위 확정 후:
 - `모든 프로젝트`: `~/.claude/CLAUDE.md` 하단에 `## am-strategy 플러그인` 섹션 추가
@@ -127,17 +155,18 @@ AskUserQuestion으로 적용 범위 확정 후:
 
 이 단계는 `ulw` 매직 키워드를 활용하여 수행.
 
-### Step 8: 설치 결과 보고
+### Step 7: 설치 결과 보고
 
 설치된 항목·건너뛴 항목·추가 필요 조치를 표로 요약 출력.
 모델 최신화 결과(변경 전/후)와 `.env` 키 설정 상태(마스킹)를 함께 표기.
+runtime_dependencies(pptxgenjs·python-docx) 설치 여부를 별도 표로 표기.
 `/am-strategy:help` 명령으로 사용법 확인을 안내.
 
 ## 스킬 위임
 
 | 대상 | 목적 | 트리거 |
 |------|------|--------|
-| `/am-strategy:help` | 설치 후 사용법 안내 | Step 8 종료 시 |
+| `/am-strategy:help` | 설치 후 사용법 안내 | Step 7 종료 시 |
 
 ## 상태 관리
 
@@ -149,7 +178,11 @@ AskUserQuestion으로 적용 범위 확정 후:
 | 증상 | 원인 | 해결 |
 |------|------|------|
 | `pip install` 실패 | Python 환경 미설정 | Python 3.9+ 설치 후 재시도 |
+| `npm install pptxgenjs` 실패 | Node 환경 미설정 | Node.js 18+ 설치(https://nodejs.org/) 후 `npm init -y` → 재시도 |
+| `node -e "require('pptxgenjs')"` 오류 | pptxgenjs 미설치 | 플러그인 루트(`am-strategy/`)에서 `npm install pptxgenjs` |
+| `/report` 실행 시 `Cannot find module 'pptxgenjs'` | `gateway/` 등 하위 디렉토리에 설치됨 (Node 해석 경로 밖) | 플러그인 루트로 재설치: `cd am-strategy && npm install pptxgenjs` |
+| `python -c "import docx"` 오류 | python-docx 미설치 | `pip install python-docx` |
 | API 키 미설정 경고 | `.env` 미작성 | `gateway/.env`에 GEMINI_API_KEY / GROQ_API_KEY 입력 |
 | 모델 ID 인식 실패 | 최신 alias 미반영 | Step 4 재실행 또는 `runtime-mapping.yaml` 직접 수정 |
 | `.env` git 노출 위험 | `.gitignore` 미등록 | `.gitignore`에 `gateway/.env` 추가 후 `git rm --cached gateway/.env` |
-| `anthropic-skills` 미설치 | 외부 플러그인 미설치 | `/report` 스킬 사용 전 별도 설치 필요 |
+| `/report` 빌드 실패 | runtime_dependencies 미충족 | `/am-strategy:setup` 재실행하여 pptxgenjs·python-docx 설치 |

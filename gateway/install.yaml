@@ -4,6 +4,8 @@
 #   - Claude Code 빌트인 도구(Read/Write/Bash 등)와 OMC 기본 MCP/LSP는 포함하지 않음
 #   - 이 플러그인은 문서 워크플로우 중심이므로 외부 MCP/LSP 서버 불필요
 #   - 커스텀 도구(generate_image, convert-to-markdown)만 선언
+#   - DMAP 표준 Office 생성 패턴(PPT 2단계·DOCX 1단계)에 필요한 런타임 의존성은
+#     runtime_dependencies 섹션에 등록 (setup 스킬이 자동 설치·검증)
 
 mcp_servers: []
 
@@ -19,3 +21,22 @@ custom_tools:
     description: "Office 문서(pptx/docx/xlsx) → Markdown 변환 + Groq VLM 이미지 설명"
     source: tools/convert-to-markdown.py
     required: false
+
+# DMAP Office 빌더 런타임 의존성
+#   - PPT: pptxgenjs (node) — pptx-spec-writer 명세 → build.js → .pptx
+#   - DOCX: python-docx (python) — strategy-report.md → build.py → .docx
+# setup 스킬이 각 entry의 check 명령으로 설치 여부 확인 후 install 제안
+runtime_dependencies:
+  - name: pptxgenjs
+    description: "PPT 빌드용 Node.js 라이브러리 — report 스킬이 build.js 직접 실행"
+    runtime: node                             # 사전 요구: node ≥ 18
+    install: "npm install pptxgenjs"
+    check: "node -e \"require('pptxgenjs')\""
+    required: true
+
+  - name: python-docx
+    description: "DOCX 빌드용 Python 라이브러리 — report 스킬이 build.py 직접 실행"
+    runtime: python                           # 사전 요구: python ≥ 3.9
+    install: "pip install python-docx"
+    check: "python -c \"import docx\""
+    required: true

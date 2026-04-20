@@ -24,9 +24,9 @@ tier_mapping:
         MEDIUM:
           model: "claude-haiku-4-5"   # 정적 분석 결과 파싱은 경량
 
-  doc-exporter:
-    LOW:
-      model: "claude-haiku-4-5"
+  pptx-spec-writer:
+    MEDIUM:
+      model: "claude-sonnet-4-6"   # PPT 패턴(A~F) 매핑·슬라이드 흐름 설계 품질 확보
 
 # ───────────────────────────────────────────────
 # 추상 도구 → 실제 도구 매핑 (builtin 도구는 생략)

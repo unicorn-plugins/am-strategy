@@ -23,8 +23,8 @@
 ### 사전 요구사항
 
 - [Claude Code](https://claude.com/claude-code) CLI 설치
-- Python 3.9+ (커스텀 도구 실행용)
-- (선택) `anthropic-skills` 플러그인 (최종 .docx/.pptx 변환 시)
+- Python 3.9+ (커스텀 도구 + DOCX 빌더 `python-docx` 실행용)
+- Node.js 18+ (PPT 빌더 `pptxgenjs` 실행용)
 - (선택) `GEMINI_API_KEY`, `GROQ_API_KEY` (인포그래픽 생성·Office 변환 시)
 
 ### 플러그인 설치
@@ -68,7 +68,7 @@ claude --plugin-dir .
 > ```
 > - `gateway/install.yaml` 기반 커스텀 도구 의존성 안내 + pip 설치 옵션
 > - `.env` 템플릿 복사 가이드 (GEMINI_API_KEY / GROQ_API_KEY)
-> - `anthropic-skills` 설치 여부 확인
+> - DMAP Office 빌더 런타임 의존성 자동 검증·설치 (`pptxgenjs`, `python-docx`)
 > - 활성화 라우팅 테이블 등록 (모든 프로젝트 / 이 프로젝트만 선택)
 
 ### 처음 GitHub을 사용하시나요?
@@ -135,9 +135,10 @@ claude plugin install am-strategy@am-strategy
   4) WHY 통합 보고서 → why-statement.md
 
 사용자: /am-strategy:report
-→ reviewer가 독립 검증 → 출력 장수 질문 →
-  doc-exporter가 anthropic-skills:docx/pptx에 위임 →
-  경영진 요약·실무진 상세·PPT 발표본 생성
+→ reviewer가 독립 검증 → 출력 장수·인포그래픽 옵션 질문 →
+  pptx-spec-writer가 PPT 명세(ppt-spec.md) 작성 →
+  report 스킬이 pptxgenjs build.js를 직접 작성·실행(.pptx) →
+  report 스킬이 python-docx build.py를 직접 작성·실행(요약본·상세본 .docx)
 ```
 
 ### 3단계 권장 워크플로우
@@ -164,7 +165,7 @@ claude plugin install am-strategy@am-strategy
 | `risk-governance` | HIGH | 4영역 리스크 / 5 거버넌스 회의체 / 가드레일 / AI 정책 3-bucket |
 | `change-manager` | MEDIUM | 이해관계자 맵 / Phase별 커뮤니케이션·교육 / 조직·문화·측정 전환 |
 | `reviewer` | HIGH | **독립 검증** (별도 컨텍스트) — 정합성·일관성·커버리지·파일럿·게이트 |
-| `doc-exporter` | LOW | `.docx` 2종 + `.pptx` + 인포그래픽 (anthropic-skills 위임) |
+| `pptx-spec-writer` | MEDIUM | 경영진 PPT 시각 명세(.md) 작성 — DMAP 2단계 빌드 패턴 (실제 빌드는 `skills/report`가 pptxgenjs로 직접 수행) |
 
 ---
 
@@ -177,12 +178,12 @@ claude plugin install am-strategy@am-strategy
 | `generate_image.py` | Custom (Python) | Gemini Nano Banana 기반 인포그래픽 생성 |
 | `convert-to-markdown.py` | Custom (Python) | Office 문서(.xlsx/.docx/.pptx) → Markdown 변환 |
 
-### 선택 도구
+### 런타임 의존성 (DMAP Office 빌더 — `/setup`이 자동 설치)
 
-| 도구 | 용도 |
-|------|------|
-| `anthropic-skills:docx` | 최종 Word 문서 변환 |
-| `anthropic-skills:pptx` | 최종 PowerPoint 발표본 생성 |
+| 패키지 | 런타임 | 용도 |
+|--------|--------|------|
+| `pptxgenjs` | Node.js ≥18 | 경영진 PPT 발표본(`.pptx`) 빌드 |
+| `python-docx` | Python ≥3.9 | 경영진 요약·실무진 상세 Word(`.docx`) 빌드 |
 
 ### 런타임 호환성
 
@@ -225,7 +226,7 @@ am-strategy/
 │   ├── risk-governance/ {...}
 │   ├── change-manager/ {...}
 │   ├── reviewer/ {...}
-│   └── doc-exporter/ {..., references/ppt-guide.md}
+│   └── pptx-spec-writer/ {AGENT.md, agentcard.yaml, tools.yaml, references/am-ppt-addendum.md}
 ├── gateway/
 │   ├── install.yaml
 │   ├── runtime-mapping.yaml

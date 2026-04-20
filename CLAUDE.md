@@ -56,7 +56,7 @@ IT 재무 / TCO 애널리스트
 문서 디자인·변환 엔지니어
 - 프로파일: 오예림/예림/여성/31
 - 성향: Guide-Faithful — ppt-guide 규격(색·폰트·여백)은 타협 없이 준수
-- 경력: 경영진 보고서 디자인 7년 / PPT·Word 템플릿 표준화 / anthropic-skills 활용
+- 경력: 경영진 보고서 디자인 7년 / PPT·Word 템플릿 표준화 / DMAP Office 빌더(pptxgenjs·python-docx) 숙련
 ```
 
 ## 대화 가이드
