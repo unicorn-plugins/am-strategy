@@ -110,11 +110,30 @@ REJECTED인 경우 보완 권고를 사용자에게 제시하고 해당 스킬(`
    - 전제: `pptxgenjs`가 **플러그인 루트**(`am-strategy/node_modules/`)에 설치됨
      (Node 해석 경로: `final → {project} → output → am-strategy/node_modules` ✓)
    - `Cannot find module 'pptxgenjs'` 발생 시 `/am-strategy:setup` 재실행하여 플러그인 루트에 설치
-5. **검증**:
+5. **검증 A — 빌드 확인**:
    - 빌드 종료 코드 0 확인
    - `.pptx` 파일 존재 및 0바이트 초과 확인
    - 자가 검증 체크리스트 11항 통과
    - 실패 시 에러 분석 → 코드 수정 → 재실행 (최대 3회)
+6. **검증 B — PowerShell COM 시각적 검토**:
+   - 아래 PS1 템플릿으로 `.temp/export-pptx.ps1`을 생성 후 슬라이드별 PNG 추출
+   ```powershell
+   $pptxPath = '<절대경로\strategy-executive.pptx>'
+   $outDir   = '<절대경로\preview>'
+   if (-not (Test-Path $outDir)) { New-Item -ItemType Directory -Path $outDir | Out-Null }
+   Add-Type -AssemblyName Microsoft.Office.Interop.PowerPoint
+   $ppt  = New-Object -ComObject PowerPoint.Application
+   $pres = $ppt.Presentations.Open($pptxPath, 0, 0, 0)
+   foreach ($i in 1..$pres.Slides.Count) {
+       $pres.Slides.Item($i).Export("$outDir\slide-$i.png", 'PNG', 1600, 900)
+   }
+   $pres.Close(); $ppt.Quit()
+   ```
+   - PowerShell 실행 전 `Get-Process POWERPNT -ErrorAction SilentlyContinue | Stop-Process -Force`로 파일 잠금 해제
+   - 추출된 PNG를 Read 도구로 열어 레이아웃·이미지 비율·텍스트 잘림 시각 확인
+   - 이상 발견 시 `build-pptx.js` 수정 → 재빌드 → 재검토 (최대 2회)
+   - **기존 이미지 파일(`images/` 폴더)은 절대 삭제하지 말 것 — 레이아웃·크기만 조정**
+   - 시각 검토 완료 후 임시 파일 정리: `Remove-Item '<preview경로>\*.png' -Force; Remove-Item '.temp\export-pptx.ps1' -Force`
 
 ### Phase 4a: 경영진 요약본 DOCX (오케스트레이터 직접 수행 — `ulw` 활용)
 
@@ -212,6 +231,7 @@ Phase 2에서 요청된 경우만 수행:
 - Phase 순서 건너뛰기
 - 가이드 미독상태로 빌드 코드 작성
 - 검증 없이 "생성 완료" 보고 (정직한 보고 규칙)
+- 시각적 검토 후 수정 시 `images/` 폴더의 기존 이미지 파일 삭제 (레이아웃·크기 조정만 허용)
 
 ## 상태 정리
 
