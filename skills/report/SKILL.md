@@ -55,6 +55,14 @@ user-invocable: true
 - DMAP 1단계 패턴: 본문 md가 곧 명세 → `python-docx` `build.py`를 Claude Code 직접 작성·실행
 - 별도 spec-writer 에이전트 없음 (위 테이블에 docx-spec-writer 없음이 의도적임)
 
+### 서브 에이전트 호출
+워크플로우 단계에 `Agent: {agent-name}`이 명시된 경우,
+메인 에이전트는 해당 단계를 직접 수행하지 않고,
+반드시 위 프롬프트 조립 규칙에 따라 해당 에이전트를 호출하여 결과를 받아야 함.
+
+서브에이전트 호출 없이 메인 에이전트가 해당 산출물을 직접 작성하면
+스킬 미준수로 간주함.
+
 ## 워크플로우
 
 ### Phase 1: 독립 검증 → Agent: reviewer (`/oh-my-claudecode:verify` 활용)

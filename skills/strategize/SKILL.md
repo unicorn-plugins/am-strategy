@@ -38,6 +38,14 @@ AM **전략 수립** STEP 3 워크플로우를 오케스트레이션함.
   - tco-analyst / change-manager: MEDIUM → `claude-sonnet-4-5`
 - `Agent(subagent_type=FQN, model=매핑된 모델, prompt=조립된 프롬프트)` 호출
 
+### 서브 에이전트 호출
+워크플로우 단계에 `Agent: {agent-name}`이 명시된 경우,
+메인 에이전트는 해당 단계를 직접 수행하지 않고,
+반드시 위 프롬프트 조립 규칙에 따라 해당 에이전트를 호출하여 결과를 받아야 함.
+
+서브에이전트 호출 없이 메인 에이전트가 해당 산출물을 직접 작성하면
+스킬 미준수로 간주함.
+
 ## 워크플로우
 
 ### Phase 1: 6R 상세화 → Agent: strategy-planner (`/oh-my-claudecode:ralplan` 활용)

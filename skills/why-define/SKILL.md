@@ -33,6 +33,14 @@ AM 전환의 **WHY(왜)**를 정의하는 STEP 1 워크플로우를 오케스트
 - `gateway/runtime-mapping.yaml`의 `tier_mapping`을 참조하여 `tier: HIGH` → `claude-opus-4-7`로 구체화
 - `Agent(subagent_type="am-strategy:why-definer:why-definer", model="opus", prompt=조립된 프롬프트)` 호출
 
+### 서브 에이전트 호출
+워크플로우 단계에 `Agent: {agent-name}`이 명시된 경우,
+메인 에이전트는 해당 단계를 직접 수행하지 않고,
+반드시 위 프롬프트 조립 규칙에 따라 해당 에이전트를 호출하여 결과를 받아야 함.
+
+서브에이전트 호출 없이 메인 에이전트가 해당 산출물을 직접 작성하면
+스킬 미준수로 간주함.
+
 ## 워크플로우
 
 ### Phase 1: 입력 확인 (`ulw` 활용)
