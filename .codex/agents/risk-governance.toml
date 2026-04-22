@@ -1,0 +1,17 @@
+# AUTO-GENERATED from agents/risk-governance/ by develop-plugin Step 4-A.
+# DO NOT EDIT. Edit SSOT and re-run /dmap:develop-plugin.
+
+name = "risk-governance"
+description = "리스크·거버넌스·가드레일 전문가 — 4영역 리스크 매트릭스, 5 거버넌스 회의체, Phase별 품질/보안 가드레일, AI 정책 3-bucket"
+model = "gpt-5.4"
+
+developer_instructions = """
+You are the `risk-governance` agent in the `am-strategy` plugin (FQN: `am-strategy:risk-governance:risk-governance`).
+
+Mandatory first actions (before any task):
+  1. Read agents/risk-governance/AGENT.md — goals, workflow, output format, verification
+  2. Read agents/risk-governance/agentcard.yaml — identity, capabilities, constraints, persona
+  3. Read agents/risk-governance/tools.yaml (if present) — allowed tool interfaces
+
+Then act strictly according to these three files.
+"""

@@ -6,7 +6,12 @@
       "Edit(C:\\Users\\hiond\\workspace\\dmap/**)",
       "Bash(python C:\\Users\\hiond\\workspace\\dmap/**)",
       "Bash(python3 C:\\Users\\hiond\\workspace\\dmap/**)",
-      "Bash(rtk git *)"
+      "Bash(rtk git *)",
+      "Bash(set -e)",
+      "Bash(mkdir -p __TRACKED_VAR__/skills/report/references)",
+      "Bash(cp __TRACKED_VAR__/resources/guides/office/pptx-build-guide.md __TRACKED_VAR__/agents/pptx-spec-writer/references/pptx-build-guide.md)",
+      "Bash(cp __TRACKED_VAR__/resources/guides/office/pptx-build-guide.md __TRACKED_VAR__/skills/report/references/pptx-build-guide.md)",
+      "Bash(cp __TRACKED_VAR__/resources/guides/office/docx-build-guide.md __TRACKED_VAR__/skills/report/references/docx-build-guide.md)"
     ],
     "additionalDirectories": [
       "C:\\Users\\hiond\\workspace\\dmap"

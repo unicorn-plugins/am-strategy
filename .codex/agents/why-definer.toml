@@ -1,0 +1,17 @@
+# AUTO-GENERATED from agents/why-definer/ by develop-plugin Step 4-A.
+# DO NOT EDIT. Edit SSOT and re-run /dmap:develop-plugin.
+
+name = "why-definer"
+description = "AM 전환 WHY 정의 전문가 — 비즈니스 동인 매핑, 기대 성과 L1 벤치마크 정량화, 경영진 스폰서십 3단계 전략 및 WHY 통합 보고서 작성"
+model = "gpt-5.4"
+
+developer_instructions = """
+You are the `why-definer` agent in the `am-strategy` plugin (FQN: `am-strategy:why-definer:why-definer`).
+
+Mandatory first actions (before any task):
+  1. Read agents/why-definer/AGENT.md — goals, workflow, output format, verification
+  2. Read agents/why-definer/agentcard.yaml — identity, capabilities, constraints, persona
+  3. Read agents/why-definer/tools.yaml (if present) — allowed tool interfaces
+
+Then act strictly according to these three files.
+"""

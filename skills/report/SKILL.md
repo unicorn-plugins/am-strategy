@@ -19,9 +19,9 @@ user-invocable: true
 - **Phase 5**: (선택) `generate_image`로 인포그래픽 PNG 생성
 - **Phase 6**: 완료 보고
 
-**DMAP 표준 Office 빌드 패턴 준수**:
-- PPT: 2단계(Spec Agent + Orchestrator Builder) — `{DMAP_PLUGIN_DIR}/resources/guides/office/pptx-build-guide.md`
-- DOCX: 1단계(Orchestrator Builder 단독 — 본문이 곧 명세) — `{DMAP_PLUGIN_DIR}/resources/guides/office/docx-build-guide.md`
+**DMAP 표준 Office 빌드 패턴 준수** (가이드는 플러그인 내 로컬 복사본 사용):
+- PPT: 2단계(Spec Agent + Orchestrator Builder) — `{PLUGIN_DIR}/skills/report/references/pptx-build-guide.md`
+- DOCX: 1단계(Orchestrator Builder 단독 — 본문이 곧 명세) — `{PLUGIN_DIR}/skills/report/references/docx-build-guide.md`
 - 외부 변환 스킬(`anthropic-skills:docx/pptx` 등) **의존 제거**
 
 ## 활성화 조건
@@ -80,7 +80,7 @@ REJECTED인 경우 보완 권고를 사용자에게 제시하고 해당 스킬(`
 - **TASK**: `strategy-report.md` + step1~2 산출물을 분석하여 경영진 PPT 시각 명세 작성
 - **EXPECTED OUTCOME**: `output/{project}/final/ppt-spec.md` (패턴 A~F 매핑, 5 스테이지 골격, 이미지 참조 포함)
 - **MUST DO**:
-  - `{DMAP_PLUGIN_DIR}/resources/guides/office/pptx-build-guide.md` 1~5절 필독
+  - `{PLUGIN_DIR}/agents/pptx-spec-writer/references/pptx-build-guide.md` 1~5절 필독
   - `{PLUGIN_DIR}/agents/pptx-spec-writer/references/am-ppt-addendum.md` 필독 (5 스테이지·3 시나리오·룰 트레이스·이미지 파일명)
   - 슬라이드당 본문 ≤7줄, 이미지는 `![설명](images/파일명.png)` 형식
   - Executive Summary 1장을 표지 직후 배치
@@ -91,7 +91,7 @@ REJECTED인 경우 보완 권고를 사용자에게 제시하고 해당 스킬(`
 
 **외부 스킬 위임 없이 오케스트레이터가 직접 수행**:
 
-1. **가이드 로드**: `{DMAP_PLUGIN_DIR}/resources/guides/office/pptx-build-guide.md` 전체 읽기
+1. **가이드 로드**: `{PLUGIN_DIR}/skills/report/references/pptx-build-guide.md` 전체 읽기
    (특히 6절 "코드 생성 시 필수 검증 규칙" 11항 모두 준수)
 2. **Spec 분석**: Phase 3a의 `ppt-spec.md` 읽고 슬라이드별 패턴(A~F) 매핑
 3. **빌드 코드 작성**: Write 도구로 `output/{project}/final/build-pptx.js` 생성
@@ -139,7 +139,7 @@ REJECTED인 경우 보완 권고를 사용자에게 제시하고 해당 스킬(`
 
 DMAP 1단계 패턴 — spec 단계 없이 본문이 곧 명세.
 
-1. **가이드 로드**: `{DMAP_PLUGIN_DIR}/resources/guides/office/docx-build-guide.md` 전체 읽기
+1. **가이드 로드**: `{PLUGIN_DIR}/skills/report/references/docx-build-guide.md` 전체 읽기
    (특히 4절 "코드 생성 시 필수 검증 규칙" 12항)
 2. **요약 본문 조립**: `strategy-report.md`에서 다음 구조로 압축 발췌
    - WHY 2~3 섹션 + 현황 핵심 5~7 섹션 + 전략 핵심 10~15 섹션 + 리스크·거버넌스 3~5 섹션 + 결론 2~3 섹션

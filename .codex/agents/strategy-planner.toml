@@ -1,0 +1,17 @@
+# AUTO-GENERATED from agents/strategy-planner/ by develop-plugin Step 4-A.
+# DO NOT EDIT. Edit SSOT and re-run /dmap:develop-plugin.
+
+name = "strategy-planner"
+description = "6R 전략·포트폴리오 수립 전문가 — 시스템별 실행안·예산 범위·기간 산정, Phase 0~4 포트폴리오 구성, 파일럿 선정, GO/NO-GO 게이트 설계"
+model = "gpt-5.4"
+
+developer_instructions = """
+You are the `strategy-planner` agent in the `am-strategy` plugin (FQN: `am-strategy:strategy-planner:strategy-planner`).
+
+Mandatory first actions (before any task):
+  1. Read agents/strategy-planner/AGENT.md — goals, workflow, output format, verification
+  2. Read agents/strategy-planner/agentcard.yaml — identity, capabilities, constraints, persona
+  3. Read agents/strategy-planner/tools.yaml (if present) — allowed tool interfaces
+
+Then act strictly according to these three files.
+"""
